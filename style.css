@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     
 }
 
@@ -11,7 +12,7 @@
     grid-template-rows: repeat(3, 1fr);
     gap: 0.5rem;
     padding: 2rem;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     justify-content: space-evenly;
     align-content: center;
     text-align: center;
@@ -24,7 +25,7 @@
 }
 
 div {
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .foto {
@@ -75,4 +76,31 @@ div {
     grid-row-start: 3;
     grid-row-end: 4;
     overflow: scroll;
+}
+
+@Media only screen and (max-width: 600px) {
+    .container {
+        display: block;
+        background-repeat: repeat-y;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: auto;
+        background: rgb(174,175,238);
+        background: radial-gradient(circle, rgb(205, 205, 216) 0%, rgb(88, 90, 99) 100%);
+    }
+
+    .foto {
+        width: 200px;
+        height: auto;
+       
+    }
+    .p3, .p4, .p5 {
+        text-align: justify;
+    }
+
+    h4 {
+        text-align: center;
+    }
+   
 }
